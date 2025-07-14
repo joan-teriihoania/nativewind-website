@@ -26,7 +26,7 @@ import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
         {[
           props.deps?.length ? `yarn add ${props.deps.join(" ")}` : undefined,
           props.devDeps?.length
-            ? `yarn add -D ${props.devDeps.join(" ")}`
+            ? `yarn add --dev ${props.devDeps.join(" ")}`
             : undefined,
         ]
           .filter(Boolean)
@@ -40,7 +40,7 @@ import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
         {[
           props.deps?.length ? `pnpm install ${props.deps.join(" ")}` : undefined,
           props.devDeps?.length
-            ? `pnpm install -D ${props.devDeps.join(" ")}`
+            ? `pnpm install --dev ${props.devDeps.join(" ")}`
             : undefined,
         ]
           .filter(Boolean)
@@ -54,7 +54,7 @@ import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
         {[
           props.deps?.length ? `bun install ${props.deps.join(" ")}` : undefined,
           props.devDeps?.length
-            ? `bun install -D ${props.devDeps.join(" ")}`
+            ? `bun install --dev ${props.devDeps.join(" ")}`
             : undefined,
         ]
           .filter(Boolean)
@@ -69,7 +69,7 @@ import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
           {[
             props.deps?.length ? `npx expo install ${props.deps.join(" ")}` : undefined,
             props.devDeps?.length
-              ? `npx expo install -D ${props.devDeps.join(" ")}`
+              ? `npx expo install --dev ${props.devDeps.join(" ")}`
               : undefined,
           ]
             .filter(Boolean)
